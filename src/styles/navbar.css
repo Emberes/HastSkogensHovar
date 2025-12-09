@@ -1,0 +1,119 @@
+/* NAVBAR */
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.app__nav {
+  position: sticky;          
+  top: 0;                    
+  z-index: 1000;             
+  
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 1.5rem;
+  background: linear-gradient(90deg, #e8f3e6, #f4f7f2);
+  border-bottom: 1px solid #d4e3d2;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.06);
+
+}
+
+.app__nav-logo {
+  font-weight: 700;
+  font-size: 1.3rem;
+  color: #234127; 
+  letter-spacing: 0.03em;
+}
+
+.app__nav-links {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.app__nav-link {
+  text-decoration: none;
+  padding: 0.4rem 0.9rem;
+  border-radius: 999px; 
+  font-size: 0.95rem;
+  color: var(--text-main);
+  transition: background-color 0.2s ease, color 0.2s ease, transform 0.1s ease;
+  align-items: center;
+
+}
+
+.app__nav-link:hover {
+  background-color: var(--green-light);
+  color: black;
+  transform: translateY(-1px);
+}
+
+.app__nav-link--active {
+  background-color: var(--green-light);
+  color: #f7fff7;
+  
+}
+
+.app__nav-toggle {
+  display: none;              
+  background: none;
+  border: none;
+  padding: 0.25rem;
+  cursor: pointer;
+}
+
+.app__nav-toggle-bar {
+  display: block;
+  width: 22px;
+  height: 2px;
+  margin: 4px 0;
+  background-color: #234127;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+} 
+
+@media (max-width: 768px) {
+  .app__nav {
+    justify-content: space-between;
+  }
+
+  .app__nav-toggle {
+    display: block;
+  }
+
+  .app__nav-links {
+    position: absolute;
+    top: 100%;               
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem 1rem;
+    background: linear-gradient(180deg, #e8f3e6, #f4f7f2);
+    border-bottom: 1px solid #d4e3d2;
+
+    max-height: 0;
+    opacity: 0;
+    pointer-events: none;
+    overflow: hidden;
+    transition: max-height 0.2s ease, opacity 0.2s ease;
+  }
+
+  .app__nav-links.app__nav-links--open {
+    max-height: 300px;        
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .app__nav-link {
+    display: block;
+    padding: 0.6rem 0.8rem;
+    border-radius: 0.5rem;
+  }
+}
+
+

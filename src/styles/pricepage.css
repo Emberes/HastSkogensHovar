@@ -1,0 +1,171 @@
+/* Pris-sida */
+
+.price-section {
+  margin-top: 2.5rem;
+}
+
+.price-section__intro {
+  margin-top: 0.25rem;
+  font-size: 0.95rem;
+  color: #4a5c4e;
+}
+
+.price-list {
+  margin-top: 1.5rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+.price-card {
+  background-color: #ffffff;
+  border-radius: 0.75rem;
+  padding: 1.25rem 1.5rem;
+  border: 1px solid #dfe9dc;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+}
+
+.price-card__title {
+  font-weight: 600;
+  margin-bottom: 0.2rem;
+  color: #234127;
+}
+
+.price-card__price {
+  font-weight: 700;
+  color: #2f6b32;
+  margin-bottom: 0.5rem;
+}
+
+.price-card__desc {
+  font-size: 0.9rem;
+  line-height: 1.4;
+  color: #495b4a;
+}
+
+.price-information {
+  margin-top: 3rem;
+}
+
+.price-information__wrapper {
+  display: flex;
+  flex-direction: column;        
+  gap: 1.5rem;
+}
+
+.price-information__card {
+  flex: 1;
+  padding: 1.5rem 1.75rem;
+  border-radius: 0.9rem;
+  background-color: var(--green-light);     
+  border: 1px solid #d4e3d2;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.price-information__card h2,
+.price-information__card h3 {
+  margin-top: 0;
+  color: #234127;
+}
+
+.price-information__card p,
+.price-information__card li {
+  font-size: 0.95rem;
+  color: black;
+}
+
+.booking-button {
+  margin-top: 1rem;
+  padding: 0.6rem 1.2rem;
+  border-radius: 999px;
+  border: 1px solid #d4e3d2;
+  background-color: #A3D78A;
+  color: black;
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.booking-button:hover {
+  background-color: #568754;
+  transform: translateY(-1px);
+}
+
+.booking-popup-overlay {
+  position: fixed;
+  inset: 0; 
+  background: rgba(0, 0, 0, 0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1100; 
+}
+
+.booking-popup {
+  background-color: #f4f7f2;
+  border-radius: 0.9rem;
+  padding: 1.5rem 1.75rem;
+  max-width: 320px;
+  width: 90%;
+  border: 1px solid #d4e3d2;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.18);
+}
+
+.booking-popup h3 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  color: #234127;
+}
+
+.booking-popup p {
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+.booking-popup__buttons {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.booking-popup__button {
+  display: block;
+  text-align: center;
+  padding: 0.6rem 0.8rem;
+  border-radius: 999px;
+  background-color: #6ba56a;
+  color: #f7fff7;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.booking-popup__button--secondary {
+  background-color: #234127;
+}
+
+.booking-popup__button:hover {
+  text-decoration: none;
+  filter: brightness(1.05);
+}
+
+.booking-popup__close {
+  margin-top: 1rem;
+  background: none;
+  border: none;
+  padding: 0;
+  font-size: 0.85rem;
+  color: #234127;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  .price-information__wrapper {
+    flex-direction: row;       
+    align-items: stretch;
+  }
+
+}
+

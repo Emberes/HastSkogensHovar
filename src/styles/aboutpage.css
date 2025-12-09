@@ -1,0 +1,129 @@
+
+/* Själva about-sidan, centrerad likt startsidan */
+.page.page--about {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding-top: 1.5rem;
+  padding-bottom: 2.5rem;
+}
+
+.about-page__image-wrapper {
+  width: 100%;
+  border-radius: 1.2rem;
+  overflow: hidden;
+  border: 1px solid #d4e3d2;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  margin-bottom: 2rem;
+}
+
+.about-page__image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-height: 600px;       
+  object-fit: cover;
+}
+
+/* Rubriker & text */
+.page--about h1 {
+  font-size: 2.1rem;
+  margin-bottom: 1rem;
+  color: var(--green-dark, #628141);
+}
+
+.page--about h2 {
+  font-size: 1.3rem;
+  margin-top: 1.8rem;
+  margin-bottom: 0.6rem;
+  color: var(--green-dark, #628141);
+}
+
+.page--about h3 {
+  font-size: 1.1rem;
+  font-weight: 500;
+  line-height: 1.6;
+  color: var(--text-main);
+  max-width: 750px;
+  margin-top: 1.5rem;
+}
+
+.page--about p {
+  font-size: 0.98rem;
+  line-height: 1.7;
+  color: #222;
+  max-width: 700px;
+}
+
+.page--about {
+  padding-bottom: 2.5rem;
+}
+
+.about-info__grid {
+  margin-top: 2.5rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+.about-intro__card {
+  background-color: #ffffff;
+  border-radius: 0.9rem;
+  padding: 1rem 1.1rem;
+  border: 1px solid #dfe9dc;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+}
+
+.about-intro__card h2 {
+  margin-top: 0;
+  margin-bottom: 0.4rem;
+  font-size: 1.2rem;
+  color: var(--green-dark, #628141);
+}
+
+.about-intro__card p {
+  margin: 0.2rem 0;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* Mobil: lite justeringar */
+@media (max-width: 768px) {
+  .page.page--about {
+    padding-top: 1rem;
+  }
+
+  .about-page__image-wrapper {
+    margin-bottom: 1.5rem;
+  }
+
+  .about-page__image {
+    max-height: 280px;  
+  }
+
+  .page--about h1 {
+    font-size: 1.8rem;
+  }
+
+    .page--about h3 {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .page.page--about {
+    max-width: 1300px;
+  }
+
+  .about-info__grid {
+    gap: 1.8rem;
+  }
+
+  .about-page__image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-height: 800px;       
+  object-fit: cover;
+}
+}
