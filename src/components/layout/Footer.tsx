@@ -44,6 +44,13 @@ export const Footer: React.FC = () => {
             <span>@hastskogenshovar</span>
           </a>
         </div>
+
+        <div className="app__footer-business">
+          <h2>Företagsuppgifter</h2>
+          <p>Hästskogens Hovar är en del av P.A.K. Service</p>
+          <p>Org. nr: 556429-9070</p>
+          <p>Godkänd för F-skatt</p>
+        </div>
       </div>
 
       <p className="app__footer-copy">
