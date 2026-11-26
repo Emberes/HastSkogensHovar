@@ -30,32 +30,26 @@ export const HomePage: React.FC = () => {
     <section className="home-intro">
         <div className="home-section">
         <div className="home-section__text">
-          <article className="home-intro__card">
+          <article className="home-intro__card home-intro__card--combined">
             <h2>Trygg hovvård där din häst står</h2>
-          <p>
-          Jag kommer ut till ditt stall och anpassar verkning och skoning efter
-          just din häst. Fokus ligger på balans, hållbarhet och att göra
-          hovvården så stressfri som möjligt.
-        </p>
-        </article>
+            <p>
+              Jag kommer ut till ditt stall och anpassar verkning och skoning efter
+              just din häst. Fokus ligger på balans, hållbarhet och att göra
+              hovvården så stressfri som möjligt.
+            </p>
 
-         <article className="home-intro__card">
             <h3>Lugn & tydlig</h3>
             <p>
               Jag tar tid på mig, förklarar gärna vad jag gör och lyssnar på både
               häst och ägare.
             </p>
-          </article>
 
-          <article className="home-intro__card">
             <h3>Hållbar hovvård</h3>
             <p>
               Fokus på hovens naturliga funktion och långsiktig hållbarhet, inte
               bara nästa skoning.
             </p>
-          </article>
 
-          <article className="home-intro__card">
             <h3>Samarbete</h3>
             <p>
               Vid behov samarbetar jag med veterinär eller andra behandlare för
