@@ -37,7 +37,26 @@ export const AboutPage: React.FC = () => {
     <article className="about-intro__card">
         <h2>Utbildning & erfarenhet</h2>
         <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem. Quisquam, quidem. Accusamus atque ipsam, quos excepturi illum necessitatibus cum optio pariatur provident at? Voluptatibus nam neque fuga? Voluptatibus odio earum minima.
+          Jag studerar till Hovformsspecialist på SANHCP, en yrkesutbildning som
+          varvar teori och praktik. Utbildningen ser till hela hästen, inte bara
+          hoven: anatomi, hovsjukdomar, foder, tänder och hälsa.
+        </p>
+        <p>
+          Varje hov bedöms individuellt utifrån sin naturliga form. Under
+          utbildningen gör jag minst 100 verkningar, följer och dokumenterar
+          hästar över tid och har praktik med mentor. Utbildningen avslutas med
+          teoretisk och praktisk examen.
+        </p>
+        <p>
+          Grunden lades med en grundkurs i hovvård och erfarenheten från mina
+          egna hästar.
+        </p>
+        <p>
+          Läs mer om utbildningen på{" "}
+          <a href="https://sanhcp.se/" target="_blank" rel="noreferrer">
+            sanhcp.se
+          </a>
+          .
         </p>
     </article>
 
