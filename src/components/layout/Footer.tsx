@@ -49,15 +49,15 @@ export const Footer: React.FC = () => {
           <h2>Företagsuppgifter</h2>
           <p>Hästskogens Hovar är en del av P.A.K. Service</p>
           <p>Org. nr: 556429-9070</p>
-          <p>Godkänd för F-skatt</p>
         </div>
       </div>
 
-      <p className="app__footer-copy">
-        © {new Date().getFullYear()} Hästskogens hovar
-      </p>
-      <p className="app__footer-copy">
-        © {new Date().getFullYear()} Elin Suvinen</p>
+      <div className="app__footer-bottom">
+        <p className="app__footer-copy">
+          © {new Date().getFullYear()} Hästskogens hovar
+        </p>
+        <p className="app__footer-copy">Godkänd för F-skatt</p>
+      </div>
     </footer>
   );
 };

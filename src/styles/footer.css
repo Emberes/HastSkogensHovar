@@ -16,18 +16,26 @@
     padding: 0.2rem 0; 
 }
 
+/* Luft mellan raderna under Företagsuppgifter */
+.app__footer .app__footer-business p + p {
+  margin-top: 0.4rem;
+}
+
+/* Samma storlek på alla tre rubrikerna i footern */
 .app__footer-contact h2,
-.app__footer-social h2 {
- font-size: 0.9rem;
-  margin: 0 0 0.2rem;      
+.app__footer-social h2,
+.app__footer-business h2 {
+  font-size: 0.9rem;
+  margin: 0 0 0.2rem;
   color: #234127;
 }
 
 .app__footer-contact p,
-.app__footer-social a {
- font-size: 0.8rem;
+.app__footer-social a,
+.app__footer-business p {
+  font-size: 0.8rem;
   color: #2f4730;
-  margin: 0;  
+  margin: 0;
 }
 
 .app__footer-contact-link{
@@ -39,18 +47,17 @@
   margin: 0.1rem 0;
 }
 
-/* .app__footer a {
-   text-decoration: none;
-  border-bottom: 1px dashed #6ba56a;
-} */
-
-.app__footer a:hover {
-  border-bottom-style: solid;
-  color:#2f6b32
+/* Nedersta raden: copyright till vänster, F-skatt till höger */
+.app__footer-bottom {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.25rem 1rem;
+  max-width: 900px;
+  margin: 1.25rem auto 0; /* luft mellan raden och blocken ovanför */
 }
 
 .app__footer-copy {
-  text-align: center;
   font-size: 0.8rem;
   color: #5b6f5e;
   margin: 0;
@@ -66,7 +73,7 @@
   display: inline-flex;      
   align-items: center;
   gap: 0.4rem;
-  font-size: 0.85rem;
+  font-size: 0.8rem;
   color: #2f4730;
   text-decoration: none;
   /* margin: 0.1rem 0; */
@@ -83,9 +90,12 @@
   border-bottom: none;
 }
 
+/* Tunn understrykning vid hover (tidigare blev det en tjock 3px-kantlinje) */
 .app__footer a:hover {
-  border-bottom-style: solid;
   color: #628141;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
 }
 
 @media (min-width: 640px) {
