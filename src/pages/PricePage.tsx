@@ -149,8 +149,9 @@ const mailtoHref = `mailto:${email}?subject=${encodeURIComponent(
                 <button
                     type="button"
                         className="booking-button"
+                            aria-label="Boka verkning"
                             onClick={() => openBookingPopup("Verkning")}>
-                            Boka den här tjänsten
+                            Boka
                             </button>
           </article>
 
@@ -163,8 +164,9 @@ const mailtoHref = `mailto:${email}?subject=${encodeURIComponent(
             <button
                     type="button"
                         className="booking-button"
+                            aria-label="Boka helskoning"
                             onClick={() => openBookingPopup("Helskoning")}>
-                            Boka den här tjänsten
+                            Boka
                             </button>
           </article>
 
@@ -176,8 +178,9 @@ const mailtoHref = `mailto:${email}?subject=${encodeURIComponent(
               <button
                     type="button"
                         className="booking-button"
+                            aria-label="Boka halvskoning"
                             onClick={() => openBookingPopup("Halvskoning")}>
-                            Boka den här tjänsten
+                            Boka
                             </button>
           </article>
 
@@ -189,8 +192,9 @@ const mailtoHref = `mailto:${email}?subject=${encodeURIComponent(
               <button
                     type="button"
                         className="booking-button"
+                            aria-label="Boka konsultation"
                             onClick={() => openBookingPopup("Konsultation")}>
-                            Boka den här tjänsten
+                            Boka
                             </button>
           </article>
 

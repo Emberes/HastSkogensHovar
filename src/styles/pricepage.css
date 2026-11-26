@@ -1,5 +1,15 @@
 /* Pris-sida */
 
+.page.page--price {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.page--price h1 {
+  font-size: clamp(1.6rem, 4vw + 0.5rem, 2.4rem);
+  overflow-wrap: break-word;
+}
+
 .price-section {
   margin-top: 2.5rem;
 }
@@ -13,11 +23,13 @@
 .price-list {
   margin-top: 1.5rem;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 1fr; /* mobil: ett kort per rad */
   gap: 1.5rem;
 }
 
 .price-card {
+  display: flex;
+  flex-direction: column;
   background-color: #ffffff;
   border-radius: 0.75rem;
   padding: 1.25rem 1.5rem;
@@ -41,6 +53,16 @@
   font-size: 0.9rem;
   line-height: 1.4;
   color: #495b4a;
+}
+
+/* Knappen hamnar längst ner, så korten i samma rad ser lika ut */
+.price-card .booking-button {
+  margin-top: auto;
+  align-self: flex-start;
+}
+
+.price-card__desc {
+  margin-bottom: 1rem;
 }
 
 .price-information {
@@ -145,6 +167,12 @@
   background-color: #234127;
 }
 
+/* a:visited i index.css gör annars texten svart på mörkgrön knapp */
+.booking-popup__button:visited,
+.booking-popup__button:hover {
+  color: #f7fff7;
+}
+
 .booking-popup__button:hover {
   text-decoration: none;
   filter: brightness(1.05);
@@ -161,11 +189,44 @@
   cursor: pointer;
 }
 
-@media (min-width: 768px) {
-  .price-information__wrapper {
-    flex-direction: row;       
-    align-items: stretch;
+/* Mobil: mindre luft i korten */
+@media (max-width: 480px) {
+  .price-information__card,
+  .price-card {
+    padding: 1.1rem 1.15rem;
   }
 
+  .booking-button {
+    width: 100%;
+  }
+
+  .price-card .booking-button {
+    align-self: stretch;
+  }
+}
+
+/* Surfplatta: två pris-kort per rad */
+@media (min-width: 600px) {
+  .price-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 768px) {
+  .price-information__wrapper {
+    flex-direction: row;
+    align-items: stretch;
+  }
+}
+
+/* Stor skärm: alla fyra pris-kort på en rad */
+@media (min-width: 1200px) {
+  .page.page--price {
+    max-width: 1300px;
+  }
+
+  .price-list {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
 
