@@ -52,10 +52,12 @@
   transform: translateY(-1px);
 }
 
-.app__nav-link--active {
+/* Svart text på den ljusgröna bakgrunden ger tydlig kontrast */
+.app__nav-link--active,
+.app__nav-link--active:visited {
   background-color: var(--green-light);
-  color: #f7fff7;
-  
+  color: var(--text-main);
+  font-weight: 700;
 }
 
 .app__nav-toggle {
