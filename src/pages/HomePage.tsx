@@ -46,6 +46,22 @@ export const HomePage: React.FC = () => {
               häst och ägare.
             </p>
           </article>
+
+          <article className="home-intro__card">
+            <h3>Hållbar hovvård</h3>
+            <p>
+              Fokus på hovens naturliga funktion och långsiktig hållbarhet, inte
+              bara nästa skoning.
+            </p>
+          </article>
+
+          <article className="home-intro__card">
+            <h3>Samarbete</h3>
+            <p>
+              Vid behov samarbetar jag med veterinär eller andra behandlare för
+              hästens bästa.
+            </p>
+          </article>
           </div>
         
           <div className="home-page__image-wrapper">
