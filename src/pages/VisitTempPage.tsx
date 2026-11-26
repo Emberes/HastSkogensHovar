@@ -22,6 +22,12 @@ export const VisitPage: React.FC = () => {
       <h2>Så här går ett besök till</h2>
       <ul className="visit-page__steps">
         <li>
+          <strong>Förberedelser:</strong> Ha hästen intagen i god tid innan jag
+          kommer, med rena och torra ben och hovar. Ordna gärna en plan, torr och
+          väl upplyst plats att stå på, och säg till i förväg om hästen brukar
+          vara orolig vid hovvård.
+        </li>
+        <li>
           <strong>Första mötet:</strong> Genomgång av hästens bakgrund, historik
           kring hovarna och eventuella problem.
         </li>
