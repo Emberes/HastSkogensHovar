@@ -142,8 +142,15 @@
   }
 
   .home-header__image-wrapper {
-    order: -1;      
-    max-height: 260px;
+    order: -1;
+    /* Let the image keep its natural proportions on narrow/tablet screens. */
+    max-height: none;
+  }
+
+  .home-header__image {
+    display: block;
+    height: auto;
+    object-fit: contain;
   }
 
   .home-header__title {
