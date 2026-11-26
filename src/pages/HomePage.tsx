@@ -1,7 +1,6 @@
 import React from "react";
 import skyHooves from "../assets/two-horse-against-blue-sky.png"
 import workingHooves from "../assets/working-with-horse.png"
-import workingOnHooves from "../assets/working-on-hooves.png"
 
 
 export const HomePage: React.FC = () => {
@@ -56,57 +55,8 @@ export const HomePage: React.FC = () => {
             className="home-page__image"
           />
         </div>
-</div>
-
-        <div className="home-intro__grid">
-          <article className="home-intro__card">
-            <h3>Lugn & tydlig</h3>
-            <p>
-              Jag tar tid på mig, förklarar gärna vad jag gör och lyssnar på både
-              häst och ägare.
-            </p>
-          </article>
-          <article className="home-intro__card">
-            <h3>Hållbar hovvård</h3>
-            <p>
-              Fokus på hovens naturliga funktion och långsiktig hållbarhet, inte
-              bara nästa skoning.
-            </p>
-          </article>
-          </div>
-          <div className="home-page__image-wrapper">
-          <img
-            src={workingOnHooves}
-            alt="En hovslagare som arbetar med en hästs hovar"
-            className="home-page__image"
-          />
-        </div>
-
-        <div className="home-intro__grid">
-          <article className="home-intro__card">
-            <h3>Lugn & tydlig</h3>
-            <p>
-              Jag tar tid på mig, förklarar gärna vad jag gör och lyssnar på både
-              häst och ägare.
-            </p>
-          </article>
-          <article className="home-intro__card">
-            <h3>Hållbar hovvård</h3>
-            <p>
-              Fokus på hovens naturliga funktion och långsiktig hållbarhet, inte
-              bara nästa skoning.
-            </p>
-          </article>
-          <article className="home-intro__card">
-            <h3>Samarbete</h3>
-            <p>
-              Vid behov samarbetar jag med veterinär eller andra behandlare för
-              hästens bästa.
-            </p>
-          </article>
-        </div>
-      </section>
+      </div>
+    </section>
     </div>
-
   );
 };
