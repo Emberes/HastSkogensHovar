@@ -1,13 +1,29 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 
 export const PricePage: React.FC = () => {
 const [isBookingPopupOpen, setIsBookingPopupOpen] = useState(false);
 const [selectedService, setSelectedService] = useState<string | null>(null);
+const firstPopupButtonRef = useRef<HTMLAnchorElement>(null);
 
 const openBookingPopup = (service?: string) => {setSelectedService(service ?? null);
   setIsBookingPopupOpen(true);
 };
     const closeBookingPopup = () => setIsBookingPopupOpen(false);
+
+// Move focus into the popup when it opens, and close it with Escape.
+useEffect(() => {
+  if (!isBookingPopupOpen) return;
+  const previouslyFocused = document.activeElement as HTMLElement | null;
+  firstPopupButtonRef.current?.focus();
+  const handleKeyDown = (e: KeyboardEvent) => {
+    if (e.key === "Escape") setIsBookingPopupOpen(false);
+  };
+  document.addEventListener("keydown", handleKeyDown);
+  return () => {
+    document.removeEventListener("keydown", handleKeyDown);
+    previouslyFocused?.focus();
+  };
+}, [isBookingPopupOpen]);
 
 const email = "info@skogenshovar.se";
 const emailSubject = "Bokningsförfrågan – hovslagare";
@@ -39,7 +55,7 @@ const mailtoHref = `mailto:${email}?subject=${encodeURIComponent(
 
         <h2>Betalning</h2>
         <p>
-          Betalning sker via Swish eller faktura efter utfört arbete. Om inget annat är överrenskommet.
+          Betalning sker via Swish eller faktura efter utfört arbete. Om inget annat är överenskommet.
         </p>
           <h3>Betalningssätt</h3>
         <ul>
@@ -68,7 +84,7 @@ const mailtoHref = `mailto:${email}?subject=${encodeURIComponent(
             <button
               type="button"
               className="booking-button"
-              onClick={() => openBookingPopup("Boka tid")}
+              onClick={() => openBookingPopup()}
             >
               Boka tid nu
             </button>
@@ -79,11 +95,18 @@ const mailtoHref = `mailto:${email}?subject=${encodeURIComponent(
 
     {isBookingPopupOpen && (
         <div className="booking-popup-overlay" onClick={closeBookingPopup}>
-            <div className="booking-popup" onClick={(e) => e.stopPropagation()}>
-                 <h3>Välj hur du vill boka</h3>
+            <div
+              className="booking-popup"
+              role="dialog"
+              aria-modal="true"
+              aria-labelledby="booking-popup-title"
+              onClick={(e) => e.stopPropagation()}
+            >
+                 <h3 id="booking-popup-title">Välj hur du vill boka</h3>
             <p>Välj om du vill boka via sms eller mail:</p>
             <div className="booking-popup__buttons">
                 <a  href="sms:+46701111111"
+                ref={firstPopupButtonRef}
                 className="booking-popup__button"
                 onClick={closeBookingPopup}
               >
@@ -173,42 +196,6 @@ const mailtoHref = `mailto:${email}?subject=${encodeURIComponent(
 
           </div>
     </section>
-
-
-    {/* <section className="price-information">
-        <div className="price-information__wrapper">
-        <div className="price-information__card">
-
-        <h2>Betalning</h2>
-        <p>
-          Betalning sker via Swish eller faktura efter utfört arbete. Om inget annat är överrenskommet.
-        </p>
-          <h3>Betalningssätt</h3>
-        <ul>
-          <li>
-            <strong>Swish:</strong> 070-111 111 111 (ange hästens namn som
-            meddelande)
-          </li>
-          <li>
-            <strong>Faktura:</strong> Kan ordnas efter överenskommelse.
-          </li>
-        </ul>
-         </div>
-
-    <div className="price-information__card price-information__card--booking">
-        <h2>Boka tid</h2>
-        <p>
-          Det går snabbast att nå mig via <strong>sms</strong> eller{" "}
-          <strong>mail</strong>. Skriv gärna med:
-        </p>
-        <ul>
-          <li>Ditt namn</li>
-          <li>Var hästen står (adress/område)</li>
-          <li>Hur många hästar det gäller</li>
-        </ul>
-        </div>
-        </div>
-    </section> */}
     </section>
     
     )

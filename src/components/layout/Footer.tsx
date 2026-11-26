@@ -27,7 +27,7 @@ export const Footer: React.FC = () => {
             target="_blank"
             rel="noreferrer"
           >
-            <img src={instagramIcon} alt="Instagram ikon" aria-hidden="true" className="app__footer-social-icon"  />
+            <img src={instagramIcon} alt="" aria-hidden="true" className="app__footer-social-icon"  />
             <span>@hastskogenshovar</span>
           </a>
           <a className="app__footer-social-link"
@@ -37,7 +37,7 @@ export const Footer: React.FC = () => {
           >
              <img
               src={facebookIcon}
-              alt="facebook ikon"
+              alt=""
               aria-hidden="true"
               className="app__footer-social-icon"
             />

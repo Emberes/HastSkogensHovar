@@ -13,7 +13,7 @@ export const Navbar: React.FC = () => {
       <nav className="app__nav">
         <div className="app__nav-logo">Hästskogens Hovar</div>
 
-        <button className="app__nav-toggle" onClick={handleToggle} arial-lable="Öppna meny" aria-expanded={isOpen}>
+        <button className="app__nav-toggle" onClick={handleToggle} aria-label={isOpen ? "Stäng meny" : "Öppna meny"} aria-expanded={isOpen}>
             <span className="app__nav-toggle-bar" />
             <span className="app__nav-toggle-bar" />
             <span className="app__nav-toggle-bar" />
