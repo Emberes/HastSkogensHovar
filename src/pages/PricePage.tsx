@@ -145,7 +145,11 @@ const mailtoHref = `mailto:${email}?subject=${encodeURIComponent(
     
             <p className="price-card__price">från 500 kr</p>
             <p className="price-card__desc">
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sequi voluptatibus ipsa exercitationem quia quasi voluptates impedit nam officiis accusantium cupiditate. Error velit corporis non corrupti veritatis omnis, culpa alias tenetur!</p>
+              Verkning av alla fyra hovarna för hästar som går barfota. Jag
+              bedömer hovarna och hur hästen står och rör sig, och verkar sedan
+              utifrån varje hovs naturliga form. Brukar behövas var 6:e till
+              8:e vecka, beroende på hästen och årstiden.
+            </p>
                 <button
                     type="button"
                         className="booking-button"
@@ -159,7 +163,10 @@ const mailtoHref = `mailto:${email}?subject=${encodeURIComponent(
             <h2 className="price-card__title">Helskoning</h2>
             <p className="price-card__price">från 1 200 kr</p>
             <p className="price-card__desc">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sequi, fugiat? Tempore ex exercitationem ipsum vitae neque nihil esse provident, eius obcaecati ratione modi temporibus sapiente quod officia fugiat laboriosam? Ducimus!.
+              Skoning på alla fyra hovarna. Hovarna verkas först, sedan anpassas
+              och sätts skorna. Passar hästar som behöver extra skydd eller
+              grepp, till exempel vid mycket arbete på hårt eller halt underlag.
+              Material ingår.
             </p>
             <button
                     type="button"
@@ -174,7 +181,10 @@ const mailtoHref = `mailto:${email}?subject=${encodeURIComponent(
             <h2 className="price-card__title">Halvskoning</h2>
             <p className="price-card__price">från 1500 kr</p>
             <p className="price-card__desc">
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sequi voluptatibus ipsa exercitationem quia quasi voluptates impedit nam officiis accusantium cupiditate. Error velit corporis non corrupti veritatis omnis, culpa alias tenetur!</p>
+              Skor på framhovarna och verkning av bakhovarna. Framhovarna bär
+              mest av hästens vikt, så för många hästar räcker det med skydd
+              där. Material ingår.
+            </p>
               <button
                     type="button"
                         className="booking-button"
@@ -188,7 +198,11 @@ const mailtoHref = `mailto:${email}?subject=${encodeURIComponent(
             <h2 className="price-card__title">Konsultation</h2>
             <p className="price-card__price">från 200000 kr</p>
             <p className="price-card__desc">
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sequi voluptatibus ipsa exercitationem quia quasi voluptates impedit nam officiis accusantium cupiditate. Error velit corporis non corrupti veritatis omnis, culpa alias tenetur!</p>
+              Genomgång av hästens hovar, rörelse och historik, till exempel vid
+              hovproblem, inför en övergång till barfota eller när du vill ha en
+              andra bedömning. Vi pratar även om foder, miljö och boots, och du
+              får en plan för den fortsatta hovvården.
+            </p>
               <button
                     type="button"
                         className="booking-button"

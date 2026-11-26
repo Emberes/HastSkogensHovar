@@ -17,7 +17,7 @@
 .price-section__intro {
   margin-top: 0.25rem;
   font-size: 0.95rem;
-  color: #4a5c4e;
+  color: var(--green-dark);
 }
 
 .price-list {
@@ -40,19 +40,19 @@
 .price-card__title {
   font-weight: 600;
   margin-bottom: 0.2rem;
-  color: #234127;
+  color: var(--green-dark);
 }
 
 .price-card__price {
   font-weight: 700;
-  color: #2f6b32;
+  color: var(--green-dark);
   margin-bottom: 0.5rem;
 }
 
 .price-card__desc {
   font-size: 0.9rem;
   line-height: 1.4;
-  color: #495b4a;
+  color: var(--green-dark);
 }
 
 /* Knappen hamnar längst ner, så korten i samma rad ser lika ut */
@@ -79,39 +79,59 @@
   flex: 1;
   padding: 1.5rem 1.75rem;
   border-radius: 0.9rem;
-  background-color: var(--green-light);     
-  border: 1px solid #d4e3d2;
+  background-color: var(--green-forest-soft);
+  border: 1px solid var(--green-forest-border);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
 .price-information__card h2,
 .price-information__card h3 {
   margin-top: 0;
-  color: #234127;
+  color: var(--green-dark);
 }
 
 .price-information__card p,
 .price-information__card li {
   font-size: 0.95rem;
-  color: black;
+  color: var(--green-dark);
+}
+
+/* Mer luft mellan punkterna i listorna (t.ex. Swish och Faktura) */
+.price-information__card li + li {
+  margin-top: 0.6rem;
+}
+
+/* "Boka tid nu" till höger i rutan */
+.price-information__card--booking .booking-button {
+  display: block;
+  margin-left: auto;
+}
+
+/* Alla knappar: samma ljusgröna färg med mörkgrön text */
+.booking-button,
+.booking-popup__button,
+.booking-popup__button:visited {
+  background-color: var(--green-light);
+  color: var(--green-dark);
+  border: 1px solid var(--green-light);
+  font-weight: 600;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.booking-button:hover,
+.booking-popup__button:hover {
+  background-color: var(--green-light-hover);
+  color: var(--green-dark);
+  text-decoration: none;
+  transform: translateY(-1px);
 }
 
 .booking-button {
   margin-top: 1rem;
   padding: 0.6rem 1.2rem;
   border-radius: 999px;
-  border: 1px solid #d4e3d2;
-  background-color: #A3D78A;
-  color: black;
-  font-weight: 600;
   font-size: 0.95rem;
   cursor: pointer;
-  transition: background-color 0.2s ease, transform 0.1s ease;
-}
-
-.booking-button:hover {
-  background-color: #568754;
-  transform: translateY(-1px);
 }
 
 .booking-popup-overlay {
@@ -137,7 +157,7 @@
 .booking-popup h3 {
   margin-top: 0;
   margin-bottom: 0.5rem;
-  color: #234127;
+  color: var(--green-dark);
 }
 
 .booking-popup p {
@@ -157,25 +177,7 @@
   text-align: center;
   padding: 0.6rem 0.8rem;
   border-radius: 999px;
-  background-color: #6ba56a;
-  color: #f7fff7;
-  font-weight: 600;
   font-size: 0.9rem;
-}
-
-.booking-popup__button--secondary {
-  background-color: #234127;
-}
-
-/* a:visited i index.css gör annars texten svart på mörkgrön knapp */
-.booking-popup__button:visited,
-.booking-popup__button:hover {
-  color: #f7fff7;
-}
-
-.booking-popup__button:hover {
-  text-decoration: none;
-  filter: brightness(1.05);
 }
 
 .booking-popup__close {
@@ -184,7 +186,7 @@
   border: none;
   padding: 0;
   font-size: 0.85rem;
-  color: #234127;
+  color: var(--green-dark);
   text-decoration: underline;
   cursor: pointer;
 }

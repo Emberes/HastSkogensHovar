@@ -24,7 +24,7 @@
 .app__nav-logo {
   font-weight: 700;
   font-size: 1.3rem;
-  color: #234127; 
+  color: var(--green-dark); 
   letter-spacing: 0.03em;
 }
 
@@ -48,7 +48,7 @@
 
 .app__nav-link:hover {
   background-color: var(--green-light);
-  color: black;
+  color: var(--green-dark);
   transform: translateY(-1px);
 }
 
@@ -73,7 +73,7 @@
   width: 22px;
   height: 2px;
   margin: 4px 0;
-  background-color: #234127;
+  background-color: var(--green-dark);
   transition: transform 0.2s ease, opacity 0.2s ease;
 } 
 

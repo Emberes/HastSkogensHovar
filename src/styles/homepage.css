@@ -25,13 +25,13 @@
 .home-header__title {
   font-size: 2.4rem;
   margin: 0;
-  color: var(--green-dark, #628141); 
+  color: var(--green-dark); 
 }
 
 .home-header__lead {
   font-size: 0.98rem;
   line-height: 1.6;
-  color: #111111; 
+  color: var(--green-dark); 
 }
 
 .home-section {
@@ -72,7 +72,7 @@
 
 .home-intro h2 {
   font-size: 1.6rem;
-  color: var(--green-dark, #628141);
+  color: var(--green-dark);
   margin-bottom: 0.5rem;
 }
 
@@ -80,7 +80,7 @@
   max-width: 650px;
   font-size: 0.98rem;
   line-height: 1.6;
-  color: #222222;
+  color: var(--green-dark);
 }
 
 .home-intro__grid {
@@ -101,14 +101,14 @@
 .home-intro__card h3 {
   margin-top: 0;
   margin-bottom: 0.4rem;
-  color: var(--green-dark, #628141);
+  color: var(--green-dark);
 }
 
 .home-intro__card p {
   margin: 0;
   font-size: 0.95rem;
   line-height: 1.5;
-  color: #333333;
+  color: var(--green-dark);
 }
 
 /* Ett samlat textblock i stället för fyra små rutor */

@@ -8,13 +8,13 @@
 .page.page--visit h1 {
   font-size: 2.1rem;
   margin-bottom: 0.75rem;
-  color: var(--green-dark, #628141);
+  color: var(--green-dark);
 }
 
 .visit-page__intro {
   font-size: 0.98rem;
   line-height: 1.6;
-  color: #222;
+  color: var(--green-dark);
   max-width: 650px;
 }
 
@@ -54,14 +54,14 @@
 .visit-page__section h2 {
   font-size: 1.3rem;
   margin-bottom: 0.6rem;
-  color: var(--green-dark, #628141);
+  color: var(--green-dark);
 }
 
 .visit-page__section p {
   font-size: 0.98rem;
   line-height: 1.7;
   max-width: 700px;
-  color: #333;
+  color: var(--green-dark);
 }
 
 .visit-page__steps {
@@ -84,7 +84,7 @@
 }
 
 .visit-page__steps li strong {
-  color: var(--green-dark, #628141);
+  color: var(--green-dark);
 }
 
 @media (max-width: 768px) {

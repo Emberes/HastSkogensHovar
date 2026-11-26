@@ -1,13 +1,14 @@
 /* Global grund */
 
 :root {
-  --green-dark:#3A6F43;
-  --green-light: #a2e696;
-  --green-muted: #4F6A3C;
-  --green-soft: #D9E7C9;
+  /* Färgtema: en mörkgrön för all text, en ljusgrön för knappar och markeringar */
+  --green-dark: #234127;        /* all text, rubriker och länkar */
+  --green-light: #a2e696;       /* knappar, aktiv menylänk, infokort */
+  --green-light-hover: #8bd97d; /* knappar vid hover */
+  --green-forest-soft: #c3d3b4; /* dämpad granbarrsgrön bakgrund för infokort */
+  --green-forest-border: #a9bf98;
 
-  --text-main: #111111;
-  --text-muted: #333333;
+  --text-main: var(--green-dark);
 }
 
 * {
@@ -28,11 +29,11 @@ a {
   text-decoration: none;   
 }
 p {
-  color: black
+  color: var(--text-main);
 }
 
 a:visited {
-  color: black;        
+  color: var(--green-dark);
 }
 
 a:hover {
@@ -47,8 +48,8 @@ a:active {
 body {
   margin: 0;
   font-family: 'Lato', sans-serif;
-  background-color: #f4f7f2; 
-  color: #234127; 
+  background-color: #f4f7f2;
+  color: var(--text-main);
 
 }
 

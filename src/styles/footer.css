@@ -27,14 +27,14 @@
 .app__footer-business h2 {
   font-size: 0.9rem;
   margin: 0 0 0.2rem;
-  color: #234127;
+  color: var(--green-dark);
 }
 
 .app__footer-contact p,
 .app__footer-social a,
 .app__footer-business p {
   font-size: 0.8rem;
-  color: #2f4730;
+  color: var(--green-dark);
   margin: 0;
 }
 
@@ -42,7 +42,7 @@
     display: inline-flex;      
   align-items: center;
   gap: 0.4rem;
-  color: #2f4730;
+  color: var(--green-dark);
   text-decoration: none;
   margin: 0.1rem 0;
 }
@@ -59,7 +59,7 @@
 
 .app__footer-copy {
   font-size: 0.8rem;
-  color: #5b6f5e;
+  color: var(--green-dark);
   margin: 0;
 }
 
@@ -74,7 +74,7 @@
   align-items: center;
   gap: 0.4rem;
   font-size: 0.8rem;
-  color: #2f4730;
+  color: var(--green-dark);
   text-decoration: none;
   /* margin: 0.1rem 0; */
 }
@@ -92,7 +92,7 @@
 
 /* Tunn understrykning vid hover (tidigare blev det en tjock 3px-kantlinje) */
 .app__footer a:hover {
-  color: #628141;
+  color: var(--green-dark);
   text-decoration: underline;
   text-decoration-thickness: 1px;
   text-underline-offset: 3px;
