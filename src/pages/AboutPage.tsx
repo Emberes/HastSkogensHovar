@@ -41,7 +41,7 @@ export const AboutPage: React.FC = () => {
         </p>
     </article>
 
-    <article className="about-intro__card">
+    <article className="about-intro__card about-intro__card--wide">
       <h2>Vem är Nelly?</h2>
       <p>
         Nelly var namnet (Hästskogens hovar), studerande till Hovformsspecialist hos @sanhcp.se! 

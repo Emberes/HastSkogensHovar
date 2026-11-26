@@ -110,6 +110,21 @@
   }
 }
 
+/* Surfplatta: två rutor bredvid varandra, "Vem är Nelly?" under dem i full bredd */
+@media (min-width: 600px) and (max-width: 1023px) {
+  .about-info__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .about-intro__card--wide {
+    grid-column: 1 / -1;
+  }
+
+  .about-intro__card--wide p {
+    max-width: none;
+  }
+}
+
 @media (min-width: 1200px) {
   .page.page--about {
     max-width: 1300px;
