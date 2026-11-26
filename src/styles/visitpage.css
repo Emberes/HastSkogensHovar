@@ -46,6 +46,11 @@
   margin-top: 2rem;
 }
 
+/* Extra luft mellan "Så här går ett besök till" och "Om samarbeten" */
+.visit-page__section + .visit-page__section {
+  margin-top: 3rem;
+}
+
 .visit-page__section h2 {
   font-size: 1.3rem;
   margin-bottom: 0.6rem;

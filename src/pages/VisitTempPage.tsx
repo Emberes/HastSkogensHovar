@@ -18,7 +18,7 @@ export const VisitPage: React.FC = () => {
           />
         </div>
 
-      <section className="visit-info__section">
+      <section className="visit-page__section">
       <h2>Så här går ett besök till</h2>
       <ul className="visit-page__steps">
         <li>
@@ -41,7 +41,7 @@ export const VisitPage: React.FC = () => {
       </ul>
       </section>
 
-      <section className="visit-info__section">
+      <section className="visit-page__section">
       <h2>Om samarbeten</h2>
       <p>
         Vid behov samarbetar vi gärna med veterinär, equiterapeut
