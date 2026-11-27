@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
+import { PRICES } from "../data/prices";
 
 export const PricePage: React.FC = () => {
 const [isBookingPopupOpen, setIsBookingPopupOpen] = useState(false);
@@ -140,79 +141,22 @@ const mailtoHref = `mailto:${email}?subject=${encodeURIComponent(
         </p>
 
         <div className="price-list">
-          <article className="price-card">
-            <h2 className="price-card__title">Verkning</h2>
-    
-            <p className="price-card__price">från 500 kr</p>
-            <p className="price-card__desc">
-              Verkning av alla fyra hovarna för hästar som går barfota. Jag
-              bedömer hovarna och hur hästen står och rör sig, och verkar sedan
-              utifrån varje hovs naturliga form. Brukar behövas var 6:e till
-              8:e vecka, beroende på hästen och årstiden.
-            </p>
-                <button
-                    type="button"
-                        className="booking-button"
-                            aria-label="Boka verkning"
-                            onClick={() => openBookingPopup("Verkning")}>
-                            Boka
-                            </button>
-          </article>
-
-           <article className="price-card">
-            <h2 className="price-card__title">Helskoning</h2>
-            <p className="price-card__price">från 1 200 kr</p>
-            <p className="price-card__desc">
-              Skoning på alla fyra hovarna. Hovarna verkas först, sedan anpassas
-              och sätts skorna. Passar hästar som behöver extra skydd eller
-              grepp, till exempel vid mycket arbete på hårt eller halt underlag.
-              Material ingår.
-            </p>
-            <button
-                    type="button"
-                        className="booking-button"
-                            aria-label="Boka helskoning"
-                            onClick={() => openBookingPopup("Helskoning")}>
-                            Boka
-                            </button>
-          </article>
-
-           <article className="price-card">
-            <h2 className="price-card__title">Halvskoning</h2>
-            <p className="price-card__price">från 1500 kr</p>
-            <p className="price-card__desc">
-              Skor på framhovarna och verkning av bakhovarna. Framhovarna bär
-              mest av hästens vikt, så för många hästar räcker det med skydd
-              där. Material ingår.
-            </p>
+          {PRICES.map((p) => (
+            <article className="price-card" key={p.id}>
+              <h2 className="price-card__title">{p.title}</h2>
+              <p className="price-card__price">{p.price_text}</p>
+              <p className="price-card__desc">{p.description}</p>
               <button
-                    type="button"
-                        className="booking-button"
-                            aria-label="Boka halvskoning"
-                            onClick={() => openBookingPopup("Halvskoning")}>
-                            Boka
-                            </button>
-          </article>
-
-            <article className="price-card">
-            <h2 className="price-card__title">Konsultation</h2>
-            <p className="price-card__price">från 200000 kr</p>
-            <p className="price-card__desc">
-              Genomgång av hästens hovar, rörelse och historik, till exempel vid
-              hovproblem, inför en övergång till barfota eller när du vill ha en
-              andra bedömning. Vi pratar även om foder, miljö och boots, och du
-              får en plan för den fortsatta hovvården.
-            </p>
-              <button
-                    type="button"
-                        className="booking-button"
-                            aria-label="Boka konsultation"
-                            onClick={() => openBookingPopup("Konsultation")}>
-                            Boka
-                            </button>
-          </article>
-
-          </div>
+                type="button"
+                className="booking-button"
+                aria-label={`Boka ${p.title.toLowerCase()}`}
+                onClick={() => openBookingPopup(p.title)}
+              >
+                Boka
+              </button>
+            </article>
+          ))}
+        </div>
     </section>
     </section>
     
